@@ -1,0 +1,17 @@
+namespace Test
+
+Supermarket(超市): EntityType
+    properties:
+        area(面积): Integer
+    relations:
+        requires(需求): ConstructionNeed
+
+ConstructionNeed(建设需求): EntityType
+    relations:
+        hashEqu(包含设备): Equipment
+
+Equipment(设备): EntityType
+    properties:
+        type(设备类型): Text
+        parameters(参数): Text
+        quantity(数量): Integer

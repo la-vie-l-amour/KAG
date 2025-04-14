@@ -9,6 +9,8 @@
 # is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express
 # or implied.
 import logging
+logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
+
 from kag.common.registry import import_modules_from_path
 
 from kag.builder.runner import BuilderChainRunner
@@ -29,6 +31,6 @@ def buildKB(file_path):
 
 if __name__ == "__main__":
     import_modules_from_path(".")
-    file_path = "./data/hotpotqa_sub_corpus.json"
+    file_path = "./data/hotpotqa_corpus.json"
 
     buildKB(file_path)

@@ -1,23 +1,24 @@
 #------------project configuration start----------------#
 openie_llm:
-  api_key: key
-  base_url: https://api.deepseek.com
-  model: deepseek-chat
+  api_key: sk-key
+  base_url: http://192.168.171.166:20500/v1
+  model: Qwen1.5-32B-Chat
   type: maas
 
 chat_llm: &chat_llm
-  api_key: key
-  base_url: https://api.deepseek.com
-  model: deepseek-chat
+  api_key: sk-key
+  base_url: http://192.168.171.166:20500/v1
+  model: Qwen1.5-32B-Chat
   type: maas
 
 vectorize_model: &vectorize_model
-  api_key: key
-  base_url: https://api.siliconflow.cn/v1/
-  model: BAAI/bge-m3
+  api_key: sk-key
+  base_url: http://192.168.171.166:20850/v1
+  model: bge-m3
   type: openai
   vector_dimensions: 1024
 vectorizer: *vectorize_model
+
 
 log:
   level: INFO
@@ -25,7 +26,7 @@ log:
 project:
   biz_scene: default
   host_addr: http://127.0.0.1:8887
-  id: '12'
+  id: '5'
   language: zh
   namespace: SupplyChain
   checkpoint_path: ./extract-runner-ckpt

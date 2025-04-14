@@ -106,4 +106,4 @@ if __name__ == "__main__":
     import_modules_from_path("./prompt")
     delay_run(hours=0)
     demo = SupplyChainDemo()
-    print(demo.qa("顺丁橡胶成本上涨对那些公司产生了影响"))
+    print(demo.qa("亚洲***中**控公司近六个月流入多少薪资？"))
