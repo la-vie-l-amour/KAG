@@ -1,13 +1,17 @@
 #------------project configuration start----------------#
 openie_llm: &openie_llm
-  api_key: sk-key
-  base_url: http://192.168.171.166:20500/v1
+  # api_key: sk-key
+  # base_url: http://192.168.171.166:20500/v1
+  api_key: sk-km5zT2e6ftWjv5XJC7761696C0294287B87e6fDd07DfD8Fb
+  base_url: https://dcloud.tydic.com:28443/v1
   model: Qwen1.5-32B-Chat
   type: maas
 
 chat_llm: &chat_llm
-  api_key: sk-key
-  base_url: http://192.168.171.166:20500/v1
+  # api_key: sk-key
+  # base_url: http://192.168.171.166:20500/v1
+  api_key: sk-km5zT2e6ftWjv5XJC7761696C0294287B87e6fDd07DfD8Fb
+  base_url: https://dcloud.tydic.com:28443/v1
   model: Qwen1.5-32B-Chat
   type: maas
 
@@ -25,7 +29,7 @@ log:
 project:
   biz_scene: medical
   host_addr: http://127.0.0.1:8887
-  id: '2'
+  id: '7'
   language: zh
   namespace: Explain
   checkpoint_path: ./extract-runner-ckpt
@@ -50,8 +54,6 @@ domain_kg_inject_chain:
   writer:
     type: kg_writer # kag.builder.component.writer.kg_writer.KGWriter
 #------------doman kg injection configuration end----------------#  
-
-
 
 #------------kag-builder configuration start----------------#
 extract_runner:
@@ -109,6 +111,45 @@ spo_runner:
       type: kg_writer # kag.builder.component.writer.kg_writer.KGWriter
   scanner:
     type: csv_scanner # kag.builder.component.scanner.csv_scanner.CSVScanner
+
+kag_builder_pipeline:
+  chain:
+    type: unstructured_builder_chain # kag.builder.default_chain.DefaultUnstructuredBuilderChain
+    extractor:
+      type: schema_constraint_extractor # kag.builder.component.extractor.schema_constraint_extractor.SchemaConstraintExtractor
+      llm: *openie_llm
+      ner_prompt:
+        type: spg_entity # kag.builder.prompt.spg_prompt.SPGEntityPrompt
+      event_prompt:
+        type: spg_event # kag.builder.prompt.spg_prompt.SPGEventPrompt
+      std_prompt:
+        type: default_std # kag.builder.prompt.default.std.OpenIEEntitystandardizationdPrompt
+      relation_prompt:
+        type: spg_relation # kag.builder.prompt.spg_prompt.SPGRelationPrompt
+    reader:
+      type: txt_reader # kag.builder.component.reader.txt_reader.TXTReader
+    post_processor:
+      type: kag_post_processor # kag.builder.component.postprocessor.kag_postprocessor.KAGPostProcessor
+    splitter:
+      type: length_splitter # kag.builder.component.splitter.length_splitter.LengthSplitter
+      split_length: 300
+      window_length: 0
+    vectorizer:
+      type: batch_vectorizer # kag.builder.component.vectorizer.batch_vectorizer.BatchVectorizer
+      vectorize_model: *vectorize_model
+    writer:
+      type: kg_writer # kag.builder.component.writer.kg_writer.KGWriter
+  num_threads_per_chain: 2
+  num_chains: 4
+  scanner:
+    type: dir_file_scanner # kag.builder.component.scanner.directory_scanner.DirectoryScanner
+
+
+chain_vectorizer:
+  type: batch
+  vectorize_model: *vectorize_model
+
+
 #------------kag-builder configuration end----------------#
 
 #------------kag-solver configuration start----------------#

@@ -7,7 +7,7 @@ from kag.solver.logic.solver_pipeline import SolverPipeline
 logger = logging.getLogger(__name__)
 
 
-class MedicineDemo:
+class ExplainDemo:
 
     """
     init for kag client
@@ -28,12 +28,12 @@ class MedicineDemo:
 if __name__ == "__main__":
     import_modules_from_path("./prompt")
 
-    demo = MedicineDemo()
-    query = "甲状腺结节可以吃什么药？"
+    demo = ExplainDemo()
+    query = "甲亢治愈率是多少"
     answer, trace_log = demo.qa(query)
     print(f"Question: {query}")
     print(f"Answer: {answer}")
     print(f"TraceLog: {trace_log}")
     import json 
     with open('trace.json', 'w', encoding='utf-8') as f:
-        json.dump(trace_log, f, indent=4)
+        json.dump(trace_log, f, ensure_ascii=False, indent=4)

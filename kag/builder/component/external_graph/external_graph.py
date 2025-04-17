@@ -54,7 +54,7 @@ class DefaultExternalGraphLoader(ExternalGraphLoaderABC):
                     f"Type of node {node.to_dict()} is beyond the schema definition."
                 )
             for k in node.properties.keys():
-                if k not in self.schema[node.label]:
+                if k not in self.schema[node.label].properties:
                     raise ValueError(
                         f"Property of node {node.to_dict()} is beyond the schema definition."
                     )

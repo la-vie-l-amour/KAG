@@ -29,6 +29,6 @@ def buildKB(file_path):
 
 if __name__ == "__main__":
     import_modules_from_path(".")
-    file_path = "./data/musique_sub_corpus.json"
+    file_path = "./data/musique_corpus.json"
 
     buildKB(file_path)

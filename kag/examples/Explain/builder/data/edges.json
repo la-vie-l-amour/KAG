@@ -1,0 +1,418 @@
+[
+    {
+        "id": "甲亢-预防方法",
+        "from": "甲亢",
+        "fromType": "Disease",
+        "to": "甲亢预防方法",
+        "toType": "Chunk",
+        "label": "prevent",
+        "properties": {}
+    },
+    {
+        "id": "甲亢-病因",
+        "from": "甲亢",
+        "fromType": "Disease",
+        "to": "甲亢病因",
+        "toType": "Chunk",
+        "label": "cause",
+        "properties": {}
+    },
+    
+    {
+        "id": "甲亢-甲状腺肿大",
+        "from": "甲亢",
+        "fromType": "Disease",
+        "to": "甲状腺肿大",
+        "toType": "Symptom",
+        "label": "commonSymptom",
+        "properties": {}
+    },
+    {
+        "id": "甲亢-甲状腺过氧化物...",
+        "from": "甲亢",
+        "fromType": "Disease",
+        "to": "甲状腺过氧化物...",
+        "toType": "Symptom",
+        "label": "commonSymptom",
+        "properties": {}
+    },
+    {
+        "id": "甲亢-突眼症",
+        "from": "甲亢",
+        "fromType": "Disease",
+        "to": "突眼症",
+        "toType": "Symptom",
+        "label": "commonSymptom",
+        "properties": {}
+    },
+    {
+        "id": "甲亢-碘甲亢",
+        "from": "甲亢",
+        "fromType": "Disease",
+        "to": "碘甲亢",
+        "toType": "Symptom",
+        "label": "commonSymptom",
+        "properties": {}
+    },
+    {
+        "id": "甲亢-体重减轻",
+        "from": "甲亢",
+        "fromType": "Disease",
+        "to": "体重减轻",
+        "toType": "Symptom",
+        "label": "commonSymptom",
+        "properties": {}
+    },
+    {
+        "id": "甲亢-新陈代谢旺盛",
+        "from": "甲亢",
+        "fromType": "Disease",
+        "to": "新陈代谢旺盛",
+        "toType": "Symptom",
+        "label": "commonSymptom",
+        "properties": {}
+    },
+    {
+        "id": "甲亢-甲状腺肿",
+        "from": "甲亢",
+        "fromType": "Disease",
+        "to": "甲状腺肿",
+        "toType": "Symptom",
+        "label": "commonSymptom",
+        "properties": {}
+    },
+    {
+        "id": "甲亢-甲状腺激素偏高",
+        "from": "甲亢",
+        "fromType": "Disease",
+        "to": "甲状腺激素偏高",
+        "toType": "Symptom",
+        "label": "commonSymptom",
+        "properties": {}
+    },
+    {
+        "id": "甲亢-特别容易饿",
+        "from": "甲亢",
+        "fromType": "Disease",
+        "to": "特别容易饿",
+        "toType": "Symptom",
+        "label": "commonSymptom",
+        "properties": {}
+    },
+    {
+        "id": "甲亢-要利琴",
+        "from": "甲亢",
+        "fromType": "Disease",
+        "to": "要利琴",
+        "toType": "Symptom",
+        "label": "commonSymptom",
+        "properties": {}
+    },
+    {
+        "id": "甲亢-否",
+        "from": "甲亢",
+        "fromType": "Disease",
+        "to": "否",
+        "toType": "MedicalInsuranceReimbursementPolicy",
+        "label": "isYibao",
+        "properties": {}
+    },
+    {
+        "id": "甲亢-青年男女",
+        "from": "甲亢",
+        "fromType": "Disease",
+        "to": "青年男女",
+        "toType": "Population",
+        "label": "susceptiblePerson",
+        "properties": {}
+    },
+    {
+        "id": "甲亢-甲亢性心脏病",
+        "from": "甲亢",
+        "fromType": "Disease",
+        "to": "甲亢性心脏病",
+        "toType": "Disease",
+        "label": "complication",
+        "properties": {}
+    },
+    {
+        "id": "甲亢-内科",
+        "from": "甲亢",
+        "fromType": "Disease",
+        "to": "内科",
+        "toType": "HospitalDepart",
+        "label": "hospitalDepartment",
+        "properties": {}
+    },
+    {
+        "id": "甲亢-内分泌科",
+        "from": "甲亢",
+        "fromType": "Disease",
+        "to": "内分泌科",
+        "toType": "HospitalDepart",
+        "label": "hospitalDepartment",
+        "properties": {}
+    },
+    {
+        "id": "甲亢-药物治疗",
+        "from": "甲亢",
+        "fromType": "Disease",
+        "to": "药物治疗",
+        "toType": "Treatment",
+        "label": "cureWay",
+        "properties": {}
+    },
+    {
+        "id": "甲亢-支持性治疗",
+        "from": "甲亢",
+        "fromType": "Disease",
+        "to": "支持性治疗",
+        "toType": "Treatment",
+        "label": "cureWay",
+        "properties": {}
+    },
+    {
+        "id": "甲亢-三碘甲状腺原氨酸（T3）",
+        "from": "甲亢",
+        "fromType": "Disease",
+        "to": "三碘甲状腺原氨酸（T3）",
+        "toType": "ExaminationIndicator",
+        "label": "check",
+        "properties": {}
+    },
+    {
+        "id": "甲亢-甲状腺素(T4)",
+        "from": "甲亢",
+        "fromType": "Disease",
+        "to": "甲状腺素(T4)",
+        "toType": "ExaminationIndicator",
+        "label": "check",
+        "properties": {}
+    },
+    {
+        "id": "甲亢-甲状腺激素抑制显像",
+        "from": "甲亢",
+        "fromType": "Disease",
+        "to": "甲状腺激素抑制显像",
+        "toType": "ExaminationIndicator",
+        "label": "check",
+        "properties": {}
+    },
+    {
+        "id": "甲亢-游离甲状腺指数",
+        "from": "甲亢",
+        "fromType": "Disease",
+        "to": "游离甲状腺指数",
+        "toType": "ExaminationIndicator",
+        "label": "check",
+        "properties": {}
+    },
+    {
+        "id": "甲亢-甲状腺血流显像",
+        "from": "甲亢",
+        "fromType": "Disease",
+        "to": "甲状腺血流显像",
+        "toType": "ExaminationIndicator",
+        "label": "check",
+        "properties": {}
+    },
+    {
+        "id": "甲亢-三碘甲状腺原氨酸摄取率",
+        "from": "甲亢",
+        "fromType": "Disease",
+        "to": "三碘甲状腺原氨酸摄取率",
+        "toType": "ExaminationIndicator",
+        "label": "check",
+        "properties": {}
+    },
+    {
+        "id": "甲亢-促甲状腺激素释放激素",
+        "from": "甲亢",
+        "fromType": "Disease",
+        "to": "促甲状腺激素释放激素",
+        "toType": "ExaminationIndicator",
+        "label": "check",
+        "properties": {}
+    },
+    {
+        "id": "甲亢-游离三碘甲状腺原氨酸指数（FT3I）",
+        "from": "甲亢",
+        "fromType": "Disease",
+        "to": "游离三碘甲状腺原氨酸指数（FT3I）",
+        "toType": "ExaminationIndicator",
+        "label": "check",
+        "properties": {}
+    },
+    {
+        "id": "甲亢",
+        "from": "甲亢",
+        "fromType": "Disease",
+        "to": "游离三碘甲状腺原氨酸",
+        "toType": "ExaminationIndicator",
+        "label": "check",
+        "properties": {}
+    },
+    {
+        "id": "甲亢-深反射检查",
+        "from": "甲亢",
+        "fromType": "Disease",
+        "to": "深反射检查",
+        "toType": "ExaminationIndicator",
+        "label": "check",
+        "properties": {}
+    },
+    {
+        "id": "甲亢-芝麻",
+        "from": "甲亢",
+        "fromType": "Disease",
+        "to": "芝麻",
+        "toType": "SpecialMedicalFood",
+        "label": "applicableFood",
+        "properties": {}
+    },
+    {
+        "id": "甲亢-腰果",
+        "from": "甲亢",
+        "fromType": "Disease",
+        "to": "腰果",
+        "toType": "SpecialMedicalFood",
+        "label": "applicableFood",
+        "properties": {}
+    },
+    {
+        "id": "甲亢-南瓜子仁",
+        "from": "甲亢",
+        "fromType": "Disease",
+        "to": "南瓜子仁",
+        "toType": "SpecialMedicalFood",
+        "label": "applicableFood",
+        "properties": {}
+    },
+    {
+        "id": "甲亢-栗子（熟）",
+        "from": "甲亢",
+        "fromType": "Disease",
+        "to": "栗子（熟）",
+        "toType": "SpecialMedicalFood",
+        "label": "applicableFood",
+        "properties": {}
+    },
+    {
+        "id": "甲亢-杏仁",
+        "from": "甲亢",
+        "fromType": "Disease",
+        "to": "杏仁",
+        "toType": "SpecialMedicalFood",
+        "label": "tabooFood",
+        "properties": {}
+    },
+    {
+        "id": "甲亢-松子仁",
+        "from": "甲亢",
+        "fromType": "Disease",
+        "to": "松子仁",
+        "toType": "SpecialMedicalFood",
+        "label": "tabooFood",
+        "properties": {}
+    },
+    {
+        "id": "甲亢-核桃",
+        "from": "甲亢",
+        "fromType": "Disease",
+        "to": "核桃",
+        "toType": "SpecialMedicalFood",
+        "label": "tabooFood",
+        "properties": {}
+    },
+    {
+        "id": "甲亢-白扁豆",
+        "from": "甲亢",
+        "fromType": "Disease",
+        "to": "白扁豆",
+        "toType": "SpecialMedicalFood",
+        "label": "tabooFood",
+        "properties": {}
+    },
+    {
+        "id": "甲亢-阿替洛尔片",
+        "from": "甲亢",
+        "fromType": "Disease",
+        "to": "阿替洛尔片",
+        "toType": "Medicine",
+        "label": "applicableMedicine",
+        "properties": {}
+    },
+    {
+        "id": "甲亢-抑亢丸",
+        "from": "甲亢",
+        "fromType": "Disease",
+        "to": "抑亢丸",
+        "toType": "Medicine",
+        "label": "applicableMedicine",
+        "properties": {}
+    },
+    {
+        "id": "甲亢-丙硫氧嘧啶片",
+        "from": "甲亢",
+        "fromType": "Disease",
+        "to": "丙硫氧嘧啶片",
+        "toType": "Medicine",
+        "label": "applicableMedicine",
+        "properties": {}
+    },
+    {
+        "id": "甲亢-盐酸普萘洛尔片",
+        "from": "甲亢",
+        "fromType": "Disease",
+        "to": "盐酸普萘洛尔片",
+        "toType": "Medicine",
+        "label": "applicableMedicine",
+        "properties": {}
+    },
+    {
+        "id": "甲亢-甲亢灵胶囊",
+        "from": "甲亢",
+        "fromType": "Disease",
+        "to": "甲亢灵胶囊",
+        "toType": "Medicine",
+        "label": "applicableMedicine",
+        "properties": {}
+    },
+    {
+        "id": "甲亢-甲巯咪唑片",
+        "from": "甲亢",
+        "fromType": "Disease",
+        "to": "甲巯咪唑片",
+        "toType": "Disease",
+        "label": "applicableMedicine",
+        "properties": {}
+    },
+    {
+        "id": "甲亢-硫唑嘌呤片",
+        "from": "甲亢",
+        "fromType": "Disease",
+        "to": "硫唑嘌呤片",
+        "toType": "Medicine",
+        "label": "applicableMedicine",
+        "properties": {}
+    },
+    {
+        "id": "甲亢-酒石酸美托洛尔缓释片",
+        "from": "甲亢",
+        "fromType": "Disease",
+        "to": "酒石酸美托洛尔缓释片",
+        "toType": "Medicine",
+        "label": "applicableMedicine",
+        "properties": {}
+    },
+    {
+        "id": "甲亢-酒石酸美托洛尔片",
+        "from": "甲亢",
+        "fromType": "Disease",
+        "to": "酒石酸美托洛尔片",
+        "toType": "Medicine",
+        "label": "applicableMedicine",
+        "properties": {}
+    }
+
+]

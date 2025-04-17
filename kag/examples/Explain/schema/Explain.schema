@@ -11,13 +11,13 @@ DiseaseCategory(疾病类目): EntityType
             index: Text
         semanticType(语义类型): Text
             index: Text
-ExaminationTest(检查检验): EntityType
+ExaminationIndicator(检验指标): EntityType
      properties:
         desc(描述): Text
             index: Text
         semanticType(语义类型): Text
             index: Text
-HospitalDepartment(科室): ConceptType
+HospitalDepart(科室): ConceptType
      hypernymPredicate: isA
 Population(人群): EntityType
      properties:
@@ -33,7 +33,7 @@ SurgicalOperation(手术操作): EntityType
             index: Text
         semanticType(语义类型): Text
             index: Text
-SpecialMedicalFood(特医食品): EntityType
+SpecialMedicalFood(食品): EntityType
      properties:
         desc(描述): Text
             index: Text
@@ -70,7 +70,6 @@ Hospital(医院): EntityType
         semanticType(语义类型): Text
             index: Text
 
-
 MedicalEvent(医疗事件): EventType
     properties:
         subject(主体): Disease              
@@ -78,6 +77,13 @@ MedicalEvent(医疗事件): EventType
         desc(描述): Text                       
             index: TextAndVector
         associatedPopulation(相关人群): Population 
+            constraint: MultiValue
+
+Factory(工厂): EntityType
+     properties:
+        desc(描述): Text
+            index: Text
+        produce(生产): Medicine
             constraint: MultiValue
 
     
@@ -123,17 +129,15 @@ Indicator(医学指征): EntityType
             index: Text
         semanticType(语义类型): Text
             index: Text
-Disease(疾病): EntityType
+Infection(传染性): EntityType
      properties:
         desc(描述): Text
             index: Text
         semanticType(语义类型): Text
             index: Text
-        prevent(预防方法): Text
-            index: TextAndVector
-        cause(发病原因): Text
-            index: TextAndVector
-        isinfect(是否传染): Text
+Disease(疾病): EntityType
+     properties:
+        desc(描述): Text
             index: Text
         incidenceRate(发病率): Text
             index: Text
@@ -156,6 +160,9 @@ Disease(疾病): EntityType
                 }
              ]]
 
+        prevent(预防方法): Chunk
+        cause(发病原因): Chunk
+        isinfect(是否传染): Infection
         isYibao(是否可用医保): MedicalInsuranceReimbursementPolicy
         susceptiblePerson(易感人群): Population
         cureWay(治疗方式): Treatment
@@ -170,9 +177,9 @@ Disease(疾病): EntityType
             constraint: MultiValue
         tabooFood(禁忌食物): SpecialMedicalFood
             constraint: MultiValue
-        hospitalDepartment(就诊科室): HospitalDepartment
+        hospitalDepartment(就诊科室): HospitalDepart
             constraint: MultiValue
-        check(检查): ExaminationTest
+        check(检查): ExaminationIndicator
             constraint: MultiValue
         diseaseSite(发病部位): HumanBodyPart
             constraint: MultiValue
