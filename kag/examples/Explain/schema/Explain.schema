@@ -71,7 +71,7 @@ Hospital(医院): EntityType
             index: Text
 
 MedicalEvent(医疗事件): EventType
-    properties:
+     properties:
         subject(主体): Disease              
         trend(趋势): Text                             
         desc(描述): Text                       
@@ -82,7 +82,7 @@ MedicalEvent(医疗事件): EventType
 Factory(工厂): EntityType
      properties:
         desc(描述): Text
-            index: Text
+            index: TextAndVector
         produce(生产): Medicine
             constraint: MultiValue
 
@@ -144,9 +144,9 @@ Disease(疾病): EntityType
         curedRate(治愈概率): Float  
         cureLastTime(痊愈时间): Text
             index: Text
-        isEasyToCure(是否易于治疗): Float
+        isEasyToCure(是否易于治疗): Text
             rule: [[
-			    Define (d:Disease)-[p:isEasyToCure]->(o:Float) {
+			    Define (d:Disease)-[p:isEasyToCure]->(o:Text) {
                     STRUCTURE {     
                         (d)-[e2:complication]->(comp:Disease)  
                         (d)-[e3:cureWay]->(cw:Treatment)           
@@ -154,8 +154,11 @@ Disease(疾病): EntityType
                     CONSTRAINT {
                         compCount = group(d).count(comp)
                         cureWayCount = group(d).count(cw)
-                        easyToCure("易于治疗条件") = (d.curedRate >= 0.7) and (compCount <= 1) and (cureWayCount >= 1)       
-                        o = easyToCure
+                        R1("治愈率"): d.curedRate >= 0.7
+                        R2("并发症"): compCount <= 1
+                        R3("治疗方式"): cureWayCount >= 1
+                        easyToCure("易于治疗条件"): R1 and R2 and R3
+                        o = "是"
                     }
                 }
              ]]

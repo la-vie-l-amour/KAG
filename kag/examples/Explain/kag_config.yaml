@@ -29,7 +29,7 @@ log:
 project:
   biz_scene: medical
   host_addr: http://127.0.0.1:8887
-  id: '7'
+  id: '13'
   language: zh
   namespace: Explain
   checkpoint_path: ./extract-runner-ckpt
@@ -116,23 +116,21 @@ kag_builder_pipeline:
   chain:
     type: unstructured_builder_chain # kag.builder.default_chain.DefaultUnstructuredBuilderChain
     extractor:
-      type: schema_constraint_extractor # kag.builder.component.extractor.schema_constraint_extractor.SchemaConstraintExtractor
+      type: schema_free_extractor # kag.builder.component.extractor.schema_constraint_extractor.SchemaConstraintExtractor
       llm: *openie_llm
       ner_prompt:
-        type: spg_entity # kag.builder.prompt.spg_prompt.SPGEntityPrompt
-      event_prompt:
-        type: spg_event # kag.builder.prompt.spg_prompt.SPGEventPrompt
+        type: example_medical_ner # kag.builder.prompt.spg_prompt.SPGEntityPrompt
       std_prompt:
-        type: default_std # kag.builder.prompt.default.std.OpenIEEntitystandardizationdPrompt
-      relation_prompt:
-        type: spg_relation # kag.builder.prompt.spg_prompt.SPGRelationPrompt
+        type: example_medical_std # kag.builder.prompt.default.std.OpenIEEntitystandardizationdPrompt
+      triple_prompt:
+        type: example_medical_triple # kag.builder.prompt.spg_prompt.SPGRelationPrompt
     reader:
       type: txt_reader # kag.builder.component.reader.txt_reader.TXTReader
     post_processor:
       type: kag_post_processor # kag.builder.component.postprocessor.kag_postprocessor.KAGPostProcessor
     splitter:
       type: length_splitter # kag.builder.component.splitter.length_splitter.LengthSplitter
-      split_length: 300
+      split_length: 100000
       window_length: 0
     vectorizer:
       type: batch_vectorizer # kag.builder.component.vectorizer.batch_vectorizer.BatchVectorizer

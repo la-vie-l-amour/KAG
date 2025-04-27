@@ -1,15 +1,17 @@
 #------------project configuration start----------------#
 openie_llm: &openie_llm
-  #api_key: sk-key
+  # api_key: sk-key
+  # base_url: http://192.168.171.166:20500/v1
   api_key: sk-km5zT2e6ftWjv5XJC7761696C0294287B87e6fDd07DfD8Fb
-  #base_url: http://192.168.171.166:20500/v1
   base_url: https://dcloud.tydic.com:28443/v1
   model: Qwen1.5-32B-Chat
   type: maas
 
 chat_llm: &chat_llm
+  # api_key: sk-key
+  # base_url: http://192.168.171.166:20500/v1
   api_key: sk-km5zT2e6ftWjv5XJC7761696C0294287B87e6fDd07DfD8Fb
-  base_url: https://dcloud.tydic.com:28443
+  base_url: https://dcloud.tydic.com:28443/v1
   model: Qwen1.5-32B-Chat
   type: maas
 

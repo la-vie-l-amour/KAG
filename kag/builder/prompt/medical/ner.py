@@ -22,7 +22,7 @@ from knext.schema.client import SchemaClient
 class OpenIENERPrompt(PromptABC):
     template_zh = """
     {
-        "instruction": "你是命名实体识别的专家。请从输入中提取与模式定义匹配的实体。如果不存在该类型的实体，请返回一个空列表。请以JSON字符串格式回应。你可以参照example进行抽取。",
+        "instruction": "你是命名实体识别的专家。请从输入中提取与模式定义匹配的实体。如果不存在该类型的实体，请返回一个空列表。请以JSON字符串格式回应，确保JSON 键和值必须使用双引号（"），不得使用单引号（'）。你可以参照example进行抽取。",
         "schema": $schema,
         "example": [
             {

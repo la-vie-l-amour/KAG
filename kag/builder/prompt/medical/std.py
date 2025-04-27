@@ -20,7 +20,7 @@ from kag.interface import PromptABC
 class OpenIEEntitystandardizationdPrompt(PromptABC):
     template_zh = """
 {
-    "instruction": "input字段包含用户提供的上下文。命名实体字段包含从上下文中提取的命名实体，这些可能是含义不明的缩写、别名或俚语。为了消除歧义，请尝试根据上下文和您自己的知识提供这些实体的官方名称。请注意，具有相同含义的实体只能有一个官方名称。请按照提供的示例中的输出字段格式，以单个JSONArray字符串形式回复，无需任何解释。",
+    "instruction": "input字段包含用户提供的上下文。命名实体字段包含从上下文中提取的命名实体，这些可能是含义不明的缩写、别名或俚语。为了消除歧义，请尝试根据上下文和您自己的知识提供这些实体的官方名称。请注意，具有相同含义的实体只能有一个官方名称。请按照提供的示例中的输出字段格式，以单个JSONArray字符串形式回复，请确保JSONArray格式正确，无需任何解释。",
     "example": {
         "input": "烦躁不安、语妄、失眠酌用镇静药，禁用抑制呼吸的镇静药。\n3.并发症的处理经抗菌药物治疗后，高热常在24小时内消退，或数日内逐渐下降。\n若体温降而复升或3天后仍不降者，应考虑SP的肺外感染，如腋胸、心包炎或关节炎等。治疗：接胸腔压力调节管＋吸引机负压吸引水瓶装置闭式负压吸引宜连续，如经12小时后肺仍未复张，应查找原因。",
         "named_entities": [
@@ -68,12 +68,27 @@ class OpenIEEntitystandardizationdPrompt(PromptABC):
         entities_with_offical_name = set()
         merged = []
         entities = kwargs.get("named_entities", [])
+         # added  ref:https://github.com/OpenSPG/KAG/issues/495
+        if "entites" in entities:
+            entities = entities["entites"]
+        if isinstance(entities, dict):
+            _entities = []
+            for category in entities:
+                _e = entities[category]
+                if isinstance(_e, list):
+                    for _e2 in _e:
+                        _entities.append({"name": _e2, "category": category})
+                elif isinstance(_e, str):
+                    _entities.append({"name": _e, "category": category})
+                else:
+                    pass
+
         for entity in standardized_entity:
             merged.append(entity)
             entities_with_offical_name.add(entity["name"])
         # in case llm ignores some entities
         for entity in entities:
-            if entity["name"] not in entities_with_offical_name:
+            if "name" in entity and entity["name"] not in entities_with_offical_name:
                 entity["official_name"] = entity["name"]
                 merged.append(entity)
         return merged

@@ -1,0 +1,195 @@
+namespace Finnal
+
+Chunk(文本块): EntityType
+     properties:
+        content(内容): Text
+          index: TextAndVector
+
+DiseaseCategory(疾病类目): EntityType
+     properties:
+        desc(描述): Text
+            index: Text
+        semanticType(语义类型): Text
+            index: Text
+ExaminationIndicator(检验指标): EntityType
+     properties:
+        desc(描述): Text
+            index: Text
+        semanticType(语义类型): Text
+            index: Text
+HospitalDepart(科室): ConceptType
+     hypernymPredicate: isA
+Population(人群): EntityType
+     properties:
+        desc(描述): Text
+            index: Text
+        semanticType(语义类型): Text
+            index: Text
+HumanBodyPart(人体部位): ConceptType
+     hypernymPredicate: isA
+SurgicalOperation(手术操作): EntityType
+     properties:
+        desc(描述): Text
+            index: Text
+        semanticType(语义类型): Text
+            index: Text
+SpecialMedicalFood(食品): EntityType
+     properties:
+        desc(描述): Text
+            index: Text
+        semanticType(语义类型): Text
+            index: Text
+Medicine(药品): EntityType
+     properties:
+        desc(描述): Text
+            index: Text
+        semanticType(语义类型): Text
+            index: Text
+MedicalInsuranceReimbursementPolicy(医保报销政策): EntityType
+     properties:
+        desc(描述): Text
+            index: Text
+        semanticType(语义类型): Text
+            index: Text
+MedicalEquipment(医疗器械): EntityType
+     properties:
+        desc(描述): Text
+            index: Text
+        semanticType(语义类型): Text
+            index: Text
+Doctor(医生): EntityType
+     properties:
+        desc(描述): Text
+            index: Text
+        semanticType(语义类型): Text
+            index: Text
+Hospital(医院): EntityType
+     properties:
+        desc(描述): Text
+            index: Text
+        semanticType(语义类型): Text
+            index: Text
+
+MedicalEvent(医疗事件): EventType
+     properties:
+        subject(主体): Disease              
+        trend(趋势): Text                             
+        desc(描述): Text                       
+            index: TextAndVector
+        associatedPopulation(相关人群): Population 
+            constraint: MultiValue
+
+Factory(工厂): EntityType
+     properties:
+        desc(描述): Text
+            index: TextAndVector
+        produce(生产): Medicine
+            constraint: MultiValue
+
+    
+Vaccine(疫苗): EntityType
+     properties:
+        desc(描述): Text
+            index: Text
+        semanticType(语义类型): Text
+            index: Text
+Treatment(治疗方法): EntityType
+     properties:
+        desc(描述): Text
+            index: Text
+        semanticType(语义类型): Text
+            index: Text
+MedicalAdvice(诊疗建议): EntityType
+     properties:
+        desc(描述): Text
+            index: Text
+        semanticType(语义类型): Text
+            index: Text
+Symptom(症状): EntityType
+     properties:
+        desc(描述): Text
+            index: Text
+        semanticType(语义类型): Text
+            index: Text
+ComprehensiveService(综合服务): EntityType
+     properties:
+        desc(描述): Text
+            index: Text
+        semanticType(语义类型): Text
+            index: Text
+MedicalTerminology(医学术语): EntityType
+     properties:
+        desc(描述): Text
+            index: Text
+        semanticType(语义类型): Text
+            index: Text
+Indicator(医学指征): EntityType
+     properties:
+        desc(描述): Text
+            index: Text
+        semanticType(语义类型): Text
+            index: Text
+Infection(传染性): EntityType
+     properties:
+        desc(描述): Text
+            index: Text
+        semanticType(语义类型): Text
+            index: Text
+Disease(疾病): EntityType
+     properties:
+        desc(描述): Text
+            index: Text
+        incidenceRate(发病率): Text
+            index: Text
+        curedRate(治愈概率): Float  
+        cureLastTime(痊愈时间): Text
+            index: Text
+        isEasyToCure(是否易于治疗): Text
+            rule: [[
+			    Define (d:Disease)-[p:isEasyToCure]->(o:Text) {
+                    STRUCTURE {     
+                        (d)-[e2:complication]->(comp:Disease)  
+                        (d)-[e3:cureWay]->(cw:Treatment)           
+                    }
+                    CONSTRAINT {
+                        compCount = group(d).count(comp)
+                        cureWayCount = group(d).count(cw)
+                        R1("治愈率"): d.curedRate >= 0.7
+                        R2("并发症"): compCount <= 1
+                        R3("治疗方式"): cureWayCount >= 1
+                        easyToCure("易于治疗条件"): R1 and R2 and R3
+                        o = "是"
+                    }
+                }
+             ]]
+
+        prevent(预防方法): Chunk
+        cause(发病原因): Chunk
+        isinfect(是否传染): Infection
+        isYibao(是否可用医保): MedicalInsuranceReimbursementPolicy
+        susceptiblePerson(易感人群): Population
+        cureWay(治疗方式): Treatment
+            constraint: MultiValue
+        complication(并发症): Disease
+            constraint: MultiValue
+        commonSymptom(常见症状): Symptom
+            constraint: MultiValue
+        applicableMedicine(适用药品): Medicine
+            constraint: MultiValue
+        applicableFood(适用食物): SpecialMedicalFood
+            constraint: MultiValue
+        tabooFood(禁忌食物): SpecialMedicalFood
+            constraint: MultiValue
+        hospitalDepartment(就诊科室): HospitalDepart
+            constraint: MultiValue
+        check(检查): ExaminationIndicator
+            constraint: MultiValue
+        diseaseSite(发病部位): HumanBodyPart
+            constraint: MultiValue
+        abnormal(异常指征): Indicator
+Others(其他): EntityType
+     properties:
+        desc(描述): Text
+            index: TextAndVector
+        semanticType(语义类型): Text
+            index: Text

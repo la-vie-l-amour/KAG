@@ -1,13 +1,17 @@
 #------------project configuration start----------------#
-openie_llm:
-  api_key: sk-key
-  base_url: http://192.168.171.166:20500/v1
+openie_llm: &openie_llm
+  # api_key: sk-key
+  # base_url: http://192.168.171.166:20500/v1
+  api_key: sk-km5zT2e6ftWjv5XJC7761696C0294287B87e6fDd07DfD8Fb
+  base_url: https://dcloud.tydic.com:28443/v1
   model: Qwen1.5-32B-Chat
   type: maas
 
 chat_llm: &chat_llm
-  api_key: sk-key
-  base_url: http://192.168.171.166:20500/v1
+  # api_key: sk-key
+  # base_url: http://192.168.171.166:20500/v1
+  api_key: sk-km5zT2e6ftWjv5XJC7761696C0294287B87e6fDd07DfD8Fb
+  base_url: https://dcloud.tydic.com:28443/v1
   model: Qwen1.5-32B-Chat
   type: maas
 
@@ -19,18 +23,132 @@ vectorize_model: &vectorize_model
   vector_dimensions: 1024
 vectorizer: *vectorize_model
 
-
 log:
   level: INFO
 
 project:
-  biz_scene: default
+  biz_scene: medical
   host_addr: http://127.0.0.1:8887
   id: '10'
   language: zh
-  namespace: Explain
+  namespace: Finnal
   checkpoint_path: ./extract-runner-ckpt
 #------------project configuration end----------------#
+
+#------------doman kg injection configuration start----------------#
+
+external_graph_loader: &external_graph_loader
+  type: base
+  node_file_path: data/nodes.json
+  edge_file_path: data/edges.json # 这两个文件不可以为空，且这两个配置文件路径缺一不可
+  match_config:
+    k: 1
+    threshold: 0.9
+
+domain_kg_inject_chain:
+  type: domain_kg_inject_chain
+  external_graph: *external_graph_loader
+  vectorizer:
+    type: batch_vectorizer # kag.builder.component.vectorizer.batch_vectorizer.BatchVectorizer
+    vectorize_model: *vectorize_model
+  writer:
+    type: kg_writer # kag.builder.component.writer.kg_writer.KGWriter
+#------------doman kg injection configuration end----------------#  
+
+#------------kag-builder configuration start----------------#
+extract_runner:
+  chain:
+    type: unstructured_builder_chain # kag.builder.default_chain.DefaultUnstructuredBuilderChain
+    extractor:
+      type: schema_free_extractor # kag.builder.component.extractor.schema_free_extractor.SchemaFreeExtractor
+      llm: *openie_llm
+      ner_prompt:
+        type: example_medical_ner # kag.examples.medicine.builder.prompt.ner.OpenIENERPrompt
+      std_prompt:
+        type: example_medical_std # kag.examples.medicine.builder.prompt.std.OpenIEEntitystandardizationdPrompt
+      triple_prompt:
+        type: example_medical_triple # kag.examples.medicine.builder.prompt.triple.OpenIETriplePrompt
+    reader:
+      type: dict_reader # kag.builder.component.reader.dict_reader.DictReader
+      content_col: text
+      id_col: idx
+      name_col: title
+    post_processor:
+      type: kag_post_processor # kag.builder.component.postprocessor.kag_postprocessor.KAGPostProcessor
+    splitter:
+      type: length_splitter # kag.builder.component.splitter.length_splitter.LengthSplitter
+      split_length: 100000
+      window_length: 0
+    vectorizer:
+      type: batch_vectorizer # kag.builder.component.vectorizer.batch_vectorizer.BatchVectorizer
+      vectorize_model: *vectorize_model
+    writer:
+      type: kg_writer # kag.builder.component.writer.kg_writer.KGWriter
+  num_threads_per_chain: 2
+  num_chains: 4
+  scanner:
+    type: csv_scanner # kag.builder.component.scanner.csv_scanner.CSVScanner
+
+spg_runner:
+  chain:
+    type: structured_builder_chain # kag.builder.default_chain.DefaultStructuredBuilderChain
+    mapping:
+      type: spg_mapping # kag.builder.component.mapping.spg_type_mapping.SPGTypeMapping
+    writer:
+      type: kg_writer # kag.builder.component.writer.kg_writer.KGWriter
+  scanner:
+    type: csv_scanner # kag.builder.component.scanner.csv_scanner.CSVScanner
+spo_runner:
+  chain:
+    mapping:
+      o_id_col: O
+      p_type_col: P
+      s_id_col: S
+      sub_property_col: properties
+      type: spo_mapping # kag.builder.component.mapping.spo_mapping.SPOMapping
+    type: structured_builder_chain # kag.builder.default_chain.DefaultStructuredBuilderChain
+    writer:
+      type: kg_writer # kag.builder.component.writer.kg_writer.KGWriter
+  scanner:
+    type: csv_scanner # kag.builder.component.scanner.csv_scanner.CSVScanner
+
+kag_builder_pipeline:
+  chain:
+    type: unstructured_builder_chain # kag.builder.default_chain.DefaultUnstructuredBuilderChain
+    extractor:
+      type: schema_free_extractor # kag.builder.component.extractor.schema_constraint_extractor.SchemaConstraintExtractor
+      llm: *openie_llm
+      ner_prompt:
+        type: example_medical_ner # kag.builder.prompt.spg_prompt.SPGEntityPrompt
+      std_prompt:
+        type: example_medical_std # kag.builder.prompt.default.std.OpenIEEntitystandardizationdPrompt
+      triple_prompt:
+        type: example_medical_triple # kag.builder.prompt.spg_prompt.SPGRelationPrompt
+    reader:
+      type: txt_reader # kag.builder.component.reader.txt_reader.TXTReader
+    post_processor:
+      type: kag_post_processor # kag.builder.component.postprocessor.kag_postprocessor.KAGPostProcessor
+    splitter:
+      type: length_splitter # kag.builder.component.splitter.length_splitter.LengthSplitter
+      split_length: 100000
+      window_length: 0
+    vectorizer:
+      type: batch_vectorizer # kag.builder.component.vectorizer.batch_vectorizer.BatchVectorizer
+      vectorize_model: *vectorize_model
+    writer:
+      type: kg_writer # kag.builder.component.writer.kg_writer.KGWriter
+  num_threads_per_chain: 2
+  num_chains: 4
+  scanner:
+    type: dir_file_scanner # kag.builder.component.scanner.directory_scanner.DirectoryScanner
+
+
+chain_vectorizer:
+  type: batch
+  vectorize_model: *vectorize_model
+
+
+#------------kag-builder configuration end----------------#
 
 #------------kag-solver configuration start----------------#
 search_api: &search_api
@@ -39,20 +157,16 @@ search_api: &search_api
 graph_api: &graph_api
   type: openspg_graph_api #kag.solver.tools.graph_api.impl.openspg_graph_api.OpenSPGGraphApi
 
-chain_vectorizer:
-  type: batch
-  vectorize_model: *vectorize_model
-
 exact_kg_retriever: &exact_kg_retriever
   type: default_exact_kg_retriever # kag.solver.retriever.impl.default_exact_kg_retriever.DefaultExactKgRetriever
-  el_num: 1
+  el_num: 5
   llm_client: *chat_llm
   search_api: *search_api
   graph_api: *graph_api
 
 fuzzy_kg_retriever: &fuzzy_kg_retriever
   type: default_fuzzy_kg_retriever # kag.solver.retriever.impl.default_fuzzy_kg_retriever.DefaultFuzzyKgRetriever
-  el_num: 1
+  el_num: 5
   vectorize_model: *vectorize_model
   llm_client: *chat_llm
   search_api: *search_api
@@ -76,12 +190,10 @@ kag_solver_pipeline:
       type: default_lf_planner # kag.solver.plan.default_lf_planner.DefaultLFPlanner
       llm_client: *chat_llm
       vectorize_model: *vectorize_model
-      logic_form_plan_prompt:
-        type: supplychain_lf_plan # kag.examples.supplychain.solver.prompt.logic_form_plan.LogicFormPlanPrompt
     lf_executor:
       type: default_lf_executor # kag.solver.execute.default_lf_executor.DefaultLFExecutor
       llm_client: *chat_llm
-      force_chunk_retriever: false
+      force_chunk_retriever: true
       exact_kg_retriever: *exact_kg_retriever
       fuzzy_kg_retriever: *fuzzy_kg_retriever
       chunk_retriever: *chunk_retriever
@@ -93,7 +205,7 @@ kag_solver_pipeline:
     type: default_generator # kag.solver.implementation.default_generator.DefaultGenerator
     llm_client: *chat_llm
     generate_prompt:
-      type: resp_supplychain # kag.examples.supplychain.solver.prompt.resp_generator.RespGenerator
+      type: example_resp_generator # kag/examples/medicine/solver/prompt/resp_generator.py
   reflector:
     type: default_reflector # kag.solver.implementation.default_reflector.DefaultReflector
     llm_client: *chat_llm

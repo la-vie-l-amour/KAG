@@ -213,7 +213,9 @@ class DefaultExactKgRetriever(ExactKgRetriever, ABC):
                 p_label_str_set.append(f'"{type.un_std_entity_type}"')
         p_label = ""
         if len(p_label_str_set):
-            p_label = "[" + ",".join(p_label_str_set) + "]"
+            # p_label = "[" + ",".join(p_label_str_set) + "]"
+            p_label = ",".join(p_label_str_set)
+
 
         exact_dsls = []
         if len(p_label_set) > 0:

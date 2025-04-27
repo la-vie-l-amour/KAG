@@ -438,8 +438,11 @@ class KAGRetriever(ChunkRetriever):
                 if category.lower() in ["works", "person", "other"]:
                     entities[entity] = category
                 else:
-                    entities[entity] = official_name or category
+                    # entities[entity] = official_name or category
+                    # 改为这样是否会更好
+                    entities[entity] =  category or official_name 
 
+            # 上面代码有问题，很有可能是{entity:official_name}，而不是{entity:category}
             cur_matched = self.match_entities(entities)
             for matched_entity in cur_matched:
                 key = f"{matched_entity['name']}_{matched_entity['type']}"

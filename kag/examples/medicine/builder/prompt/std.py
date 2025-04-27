@@ -69,12 +69,27 @@ class OpenIEEntitystandardizationdPrompt(PromptABC):
         entities_with_offical_name = set()
         merged = []
         entities = kwargs.get("named_entities", [])
+        # added  ref:https://github.com/OpenSPG/KAG/issues/495
+        if "entites" in entities:
+            entities = entities["entites"]
+        if isinstance(entities, dict):
+            _entities = []
+            for category in entities:
+                _e = entities[category]
+                if isinstance(_e, list):
+                    for _e2 in _e:
+                        _entities.append({"name": _e2, "category": category})
+                elif isinstance(_e, str):
+                    _entities.append({"name": _e, "category": category})
+                else:
+                    pass
+
         for entity in standardized_entity:
             merged.append(entity)
             entities_with_offical_name.add(entity["entity"])
         # in case llm ignores some entities
         for entity in entities:
-            if entity["entity"] not in entities_with_offical_name:
+            if "name" in entity and  entity["entity"] not in entities_with_offical_name:
                 entity["official_name"] = entity["entity"]
                 merged.append(entity)
         return merged
