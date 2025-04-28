@@ -29,7 +29,7 @@ if __name__ == "__main__":
     import_modules_from_path("./prompt")
 
     demo = ExplainDemo()
-    query = "患躁狂症吃的药是哪个公司产的？"
+    query = "甲亢治愈率是多少？"
     answer, trace_log = demo.qa(query)
     print(f"Question: {query}")
     print(f"Answer: {answer}")
