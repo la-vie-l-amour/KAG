@@ -6,8 +6,8 @@
 {"id": "cd78561b59f78b1e9d7b4bd06406f3ceabf6a8e2e9cae8d0e29e34c403a2f8a6", "value": {"abstract": {"id": "消化系统-消化道"}, "graph_stat": {"num_nodes": 2, "num_edges": 1, "num_subgraphs": 1}}}
 {"id": "dc7dd93a1aefd36a0bf0e11f6ea6bd07fec14d96f82cc280be751a7ea96b7d03", "value": {"abstract": {"id": "消化系统-消化道-口"}, "graph_stat": {"num_nodes": 3, "num_edges": 2, "num_subgraphs": 1}}}
 {"id": "a5d098b44a3c2b1b616756027fe1d9d72334ae139f12f599f8f6b48855e5364c", "value": {"abstract": {"id": "消化系统-消化道-咽"}, "graph_stat": {"num_nodes": 3, "num_edges": 2, "num_subgraphs": 1}}}
-{"id": "d48fee2221fd681ce2aae50b3c2872ac3c9fd9c6270583daa1392a50d6611b83", "value": {"abstract": {"id": "消化系统-消化道-食"}, "graph_stat": {"num_nodes": 3, "num_edges": 2, "num_subgraphs": 1}}}
 {"id": "d6b23d6e4abcba798edfc10a9173f6bb8204444375144e49baac4e618a4d44d3", "value": {"abstract": {"id": "消化系统-消化道-胃"}, "graph_stat": {"num_nodes": 3, "num_edges": 2, "num_subgraphs": 1}}}
+{"id": "d48fee2221fd681ce2aae50b3c2872ac3c9fd9c6270583daa1392a50d6611b83", "value": {"abstract": {"id": "消化系统-消化道-食"}, "graph_stat": {"num_nodes": 3, "num_edges": 2, "num_subgraphs": 1}}}
 {"id": "5c0d454ef4ae769c8a54e64fe8c06c208688472ae5436febf0ceb92947d918f2", "value": {"abstract": {"id": "消化系统-消化道-小"}, "graph_stat": {"num_nodes": 3, "num_edges": 2, "num_subgraphs": 1}}}
 {"id": "691049744c6ec06e53745fe8ce5aadc0c439e638e964452ab561853231e55790", "value": {"abstract": {"id": "消化系统-消化道-十"}, "graph_stat": {"num_nodes": 3, "num_edges": 2, "num_subgraphs": 1}}}
 {"id": "5e4f6f78707f409405af32c9556aa2c35cc00edd025585834b03607fb8218f9c", "value": {"abstract": {"id": "消化系统-消化道-空"}, "graph_stat": {"num_nodes": 3, "num_edges": 2, "num_subgraphs": 1}}}
@@ -17,8 +17,8 @@
 {"id": "eeec405b109fdd6c6e0b9f04f4cad34452ac592f4db759cf6b977516e70eb54a", "value": {"abstract": {"id": "消化系统-消化道-阑"}, "graph_stat": {"num_nodes": 3, "num_edges": 2, "num_subgraphs": 1}}}
 {"id": "fc0d88e8da6be09d46f1f57836e389210ce6dc24ac639f2063560011607dfc25", "value": {"abstract": {"id": "消化系统-消化道-结"}, "graph_stat": {"num_nodes": 3, "num_edges": 2, "num_subgraphs": 1}}}
 {"id": "2a5571d69e333bcafc5de2448d9759d3c55cad4964b8b264040dbd4984f3a1ec", "value": {"abstract": {"id": "消化系统-消化道-直"}, "graph_stat": {"num_nodes": 3, "num_edges": 2, "num_subgraphs": 1}}}
-{"id": "8a69aacdbf837ce2835ed76c9eb0544604f5e1bb155ef82dece4c32dc6f3747a", "value": {"abstract": {"id": "消化系统-消化腺"}, "graph_stat": {"num_nodes": 2, "num_edges": 1, "num_subgraphs": 1}}}
 {"id": "41dbfd6235b6950cdb51f3309ee0c8329841ccb67e6daab2471260fe21d06704", "value": {"abstract": {"id": "消化系统-消化道-肛"}, "graph_stat": {"num_nodes": 3, "num_edges": 2, "num_subgraphs": 1}}}
+{"id": "8a69aacdbf837ce2835ed76c9eb0544604f5e1bb155ef82dece4c32dc6f3747a", "value": {"abstract": {"id": "消化系统-消化腺"}, "graph_stat": {"num_nodes": 2, "num_edges": 1, "num_subgraphs": 1}}}
 {"id": "8ae0d73934c15d9b84d013b3816b2b15a89243218a59388c38823d7fc9aaf6c9", "value": {"abstract": {"id": "消化系统-消化腺-唾"}, "graph_stat": {"num_nodes": 3, "num_edges": 2, "num_subgraphs": 1}}}
 {"id": "fc09034dfeddbcaaacad31a6856bd9ff1d366532b1f7fcacfb608f8aad768649", "value": {"abstract": {"id": "消化系统-消化腺-肝"}, "graph_stat": {"num_nodes": 3, "num_edges": 2, "num_subgraphs": 1}}}
 {"id": "b7730775cbb3077ee206a08e2a3ca84d9835324530d6f0713e8bd40e8c712f83", "value": {"abstract": {"id": "消化系统-消化腺-胰"}, "graph_stat": {"num_nodes": 3, "num_edges": 2, "num_subgraphs": 1}}}
@@ -33,8 +33,8 @@
 {"id": "17d120b3088916bdfd5e24944667cb56d375aa93b0d8146a910db1c4f07d414e", "value": {"abstract": {"id": "呼吸系统-呼吸道-支"}, "graph_stat": {"num_nodes": 3, "num_edges": 2, "num_subgraphs": 1}}}
 {"id": "e759b145411f9547d4fe3b0d4c862737c1571669324f12e30a140e572f8d06f4", "value": {"abstract": {"id": "呼吸系统-肺"}, "graph_stat": {"num_nodes": 2, "num_edges": 1, "num_subgraphs": 1}}}
 {"id": "21dd515ea1e57dd94087eb9026ff079e6041112542dabb10f0492e6bbe230820", "value": {"abstract": {"id": "呼吸系统-肺-支气管"}, "graph_stat": {"num_nodes": 3, "num_edges": 2, "num_subgraphs": 1}}}
-{"id": "4fa2362cd911be4f6393d64d3562ae6975a4b72a6a809dd4cd0a855d1bae1f41", "value": {"abstract": {"id": "呼吸系统-肺-肺结缔"}, "graph_stat": {"num_nodes": 3, "num_edges": 2, "num_subgraphs": 1}}}
 {"id": "4bb924a5da727aff3242774ce86f846369397183258bc49db133d2f8a2ac42ca", "value": {"abstract": {"id": "呼吸系统-肺-肺泡"}, "graph_stat": {"num_nodes": 3, "num_edges": 2, "num_subgraphs": 1}}}
+{"id": "4fa2362cd911be4f6393d64d3562ae6975a4b72a6a809dd4cd0a855d1bae1f41", "value": {"abstract": {"id": "呼吸系统-肺-肺结缔"}, "graph_stat": {"num_nodes": 3, "num_edges": 2, "num_subgraphs": 1}}}
 {"id": "5bacd25f2bf2cdf35f6773ff498c2d79a942a4cf780c78bfef25551c639a9e45", "value": {"abstract": {"id": "呼吸系统-肺-肺血管"}, "graph_stat": {"num_nodes": 3, "num_edges": 2, "num_subgraphs": 1}}}
 {"id": "2f682b4111c31b218a98576bf48baa4ea5a755353f6d563fc7ae17464c3f696d", "value": {"abstract": {"id": "呼吸系统-肺-肺淋巴"}, "graph_stat": {"num_nodes": 3, "num_edges": 2, "num_subgraphs": 1}}}
 {"id": "9b2dd0c11353dbba5ea22dcabbd9d821492f76587a6bbadba941ab4267008458", "value": {"abstract": {"id": "呼吸系统-肺-肺神经"}, "graph_stat": {"num_nodes": 3, "num_edges": 2, "num_subgraphs": 1}}}
@@ -117,8 +117,8 @@
 {"id": "ccdbfe9e6a855ad842758e0714c3d5b04de41b4f7d8fcb279e96804b08778469", "value": {"abstract": {"id": "神经系统-周围神经系"}, "graph_stat": {"num_nodes": 2, "num_edges": 1, "num_subgraphs": 1}}}
 {"id": "ef690bf35e469142e87cf77234e26c1aafb3516d98e2bbfa21ba2a2d8af0db4d", "value": {"abstract": {"id": "神经系统-周围神经系"}, "graph_stat": {"num_nodes": 3, "num_edges": 2, "num_subgraphs": 1}}}
 {"id": "1645654957627adb37c8245315e3d85d0689259ce1299fb65c7beb9b6e279296", "value": {"abstract": {"id": "神经系统-周围神经系"}, "graph_stat": {"num_nodes": 3, "num_edges": 2, "num_subgraphs": 1}}}
-{"id": "cf48d2ef00f3076627f06bae7697e773f0b4d8e99aeb74272facc1e379535a32", "value": {"abstract": {"id": "循环系统"}, "graph_stat": {"num_nodes": 1, "num_edges": 0, "num_subgraphs": 1}}}
 {"id": "bfb59faee3232039e084a1efdd8c5c1a55e6eed63f0c8b396666150adbee4f99", "value": {"abstract": {"id": "神经系统-周围神经系"}, "graph_stat": {"num_nodes": 3, "num_edges": 2, "num_subgraphs": 1}}}
+{"id": "cf48d2ef00f3076627f06bae7697e773f0b4d8e99aeb74272facc1e379535a32", "value": {"abstract": {"id": "循环系统"}, "graph_stat": {"num_nodes": 1, "num_edges": 0, "num_subgraphs": 1}}}
 {"id": "7dbcbf1afdb26234dee8b8782b1b2343971fa712632b18eee45ec26aa2e2bbfd", "value": {"abstract": {"id": "循环系统-心脏"}, "graph_stat": {"num_nodes": 2, "num_edges": 1, "num_subgraphs": 1}}}
 {"id": "b5da8864553104d0ee4b4fb9f7e2c07b64523e5fd5d698eb7b7479edb8bd2059", "value": {"abstract": {"id": "循环系统-血管"}, "graph_stat": {"num_nodes": 2, "num_edges": 1, "num_subgraphs": 1}}}
 {"id": "46bd11ef711fe852a004794f1a1ba52de2c336d15bd6e88a4bdffbb0b5c30087", "value": {"abstract": {"id": "循环系统-血浆"}, "graph_stat": {"num_nodes": 2, "num_edges": 1, "num_subgraphs": 1}}}
@@ -148,14 +148,14 @@
 {"id": "b1e950966d28d7375cf89e96541cf134a1c7843a7f14a62068e4fc305600cc4a", "value": {"abstract": {"id": "中医科-中医外科"}, "graph_stat": {"num_nodes": 2, "num_edges": 1, "num_subgraphs": 1}}}
 {"id": "431ca6715344c2999e58f2accda5e328c5721d51b791373d9fb2e9e78a259782", "value": {"abstract": {"id": "中医科-中医眼科"}, "graph_stat": {"num_nodes": 2, "num_edges": 1, "num_subgraphs": 1}}}
 {"id": "7c2e4e3ac7e78076e106cc119843689b55a24f93dbc5b3b29ac6e4ef5132829e", "value": {"abstract": {"id": "中医科-中医肛肠科"}, "graph_stat": {"num_nodes": 2, "num_edges": 1, "num_subgraphs": 1}}}
-{"id": "aa757779f067be810b8163c7fc1fe3054c93134f82a4afa970e5725a4417090f", "value": {"abstract": {"id": "中医科-中医心身医学"}, "graph_stat": {"num_nodes": 2, "num_edges": 1, "num_subgraphs": 1}}}
 {"id": "7c21a43763aa480b3b8fc3f4b654ad725602f983eeea592ec0411d7970b29907", "value": {"abstract": {"id": "中医科-中医神经内科"}, "graph_stat": {"num_nodes": 2, "num_edges": 1, "num_subgraphs": 1}}}
+{"id": "aa757779f067be810b8163c7fc1fe3054c93134f82a4afa970e5725a4417090f", "value": {"abstract": {"id": "中医科-中医心身医学"}, "graph_stat": {"num_nodes": 2, "num_edges": 1, "num_subgraphs": 1}}}
 {"id": "1764a9cf4f38bde059a52139e0a1abe85af1dddb28fe60b1a73b412172477398", "value": {"abstract": {"id": "中医科-中医肝胆科"}, "graph_stat": {"num_nodes": 2, "num_edges": 1, "num_subgraphs": 1}}}
 {"id": "ff2bc3603b73b9ac943805d6f2c613ac0b8d4c52e8f4e49ee528b63ef0a464ec", "value": {"abstract": {"id": "中医科-中医肿瘤科"}, "graph_stat": {"num_nodes": 2, "num_edges": 1, "num_subgraphs": 1}}}
-{"id": "669f21e74dbc9911006422337a8d7ee602d85c131e84da2a6331e6bfa42c3b09", "value": {"abstract": {"id": "中医科-针灸推拿科"}, "graph_stat": {"num_nodes": 2, "num_edges": 1, "num_subgraphs": 1}}}
 {"id": "7067f9052ca938e20624be86c8f13beb73ee5b7fa78d133aa30cbe839f6ad2da", "value": {"abstract": {"id": "中医科-中医心内科"}, "graph_stat": {"num_nodes": 2, "num_edges": 1, "num_subgraphs": 1}}}
-{"id": "fc1bfe2e2288a6ded9563f4add8c9be0293eb6153da3a26e9d0b98c9bd366af4", "value": {"abstract": {"id": "中医科-中医乳腺科"}, "graph_stat": {"num_nodes": 2, "num_edges": 1, "num_subgraphs": 1}}}
+{"id": "669f21e74dbc9911006422337a8d7ee602d85c131e84da2a6331e6bfa42c3b09", "value": {"abstract": {"id": "中医科-针灸推拿科"}, "graph_stat": {"num_nodes": 2, "num_edges": 1, "num_subgraphs": 1}}}
 {"id": "4f54f8431a19b43edf1f9fc49ca8519a2d5c2f52ca91603acb36ae37eff70753", "value": {"abstract": {"id": "中医科-中医内分泌科"}, "graph_stat": {"num_nodes": 2, "num_edges": 1, "num_subgraphs": 1}}}
+{"id": "fc1bfe2e2288a6ded9563f4add8c9be0293eb6153da3a26e9d0b98c9bd366af4", "value": {"abstract": {"id": "中医科-中医乳腺科"}, "graph_stat": {"num_nodes": 2, "num_edges": 1, "num_subgraphs": 1}}}
 {"id": "582fc2dd989ad3e1da6a34e0e470b593adcb453a030430282bd8d09920da67f3", "value": {"abstract": {"id": "中医科-中医治未病科"}, "graph_stat": {"num_nodes": 2, "num_edges": 1, "num_subgraphs": 1}}}
 {"id": "62ad992747b87e4df52a3bff0cf8ac30f97c3d7f089d4060d514d0f9d60d0918", "value": {"abstract": {"id": "中医科-中医耳鼻喉科"}, "graph_stat": {"num_nodes": 2, "num_edges": 1, "num_subgraphs": 1}}}
 {"id": "f4dd5d5088cee7d4b9af2ff3cc46250dc3fb8947ef97b8bc7c9cfb43551f31db", "value": {"abstract": {"id": "中医科-中医康复科"}, "graph_stat": {"num_nodes": 2, "num_edges": 1, "num_subgraphs": 1}}}
@@ -218,12 +218,12 @@
 {"id": "695894dc2e0ce78defb4e22b96de920c704caa86613500d0eff9bef441c64805", "value": {"abstract": {"id": "耳鼻咽喉头颈外科-头"}, "graph_stat": {"num_nodes": 2, "num_edges": 1, "num_subgraphs": 1}}}
 {"id": "0c2f6ca2d7d11a98f085e565e37b94af4e592f6ce521c0f518237430d62c5112", "value": {"abstract": {"id": "耳鼻咽喉头颈外科-小"}, "graph_stat": {"num_nodes": 2, "num_edges": 1, "num_subgraphs": 1}}}
 {"id": "abaf8dde9e97fb6aa6ec0334aee7a0ee45098298ee255b5cfe79a4e89fc608e9", "value": {"abstract": {"id": "眼科"}, "graph_stat": {"num_nodes": 1, "num_edges": 0, "num_subgraphs": 1}}}
-{"id": "290f5c1c3236057a924b3d7f60f57b84d3a991d3f5eab826a27bd3f13d1827a0", "value": {"abstract": {"id": "眼科-眼底科"}, "graph_stat": {"num_nodes": 2, "num_edges": 1, "num_subgraphs": 1}}}
 {"id": "aed7375ee0c386d5af1dfc8db9cf2c65a705b454225fb198d13ff37b82f3433a", "value": {"abstract": {"id": "眼科-眼科"}, "graph_stat": {"num_nodes": 2, "num_edges": 1, "num_subgraphs": 1}}}
+{"id": "290f5c1c3236057a924b3d7f60f57b84d3a991d3f5eab826a27bd3f13d1827a0", "value": {"abstract": {"id": "眼科-眼底科"}, "graph_stat": {"num_nodes": 2, "num_edges": 1, "num_subgraphs": 1}}}
 {"id": "8af9459d8cb9e045608890793dae9ba7d0982635bfeb71169cd33fbe7a2b9fcd", "value": {"abstract": {"id": "眼科-视光中心"}, "graph_stat": {"num_nodes": 2, "num_edges": 1, "num_subgraphs": 1}}}
 {"id": "f1928d5209afcc624eb3a0a5bfd381c36c5275e39422e1e8018227f3908b9439", "value": {"abstract": {"id": "眼科-角膜科"}, "graph_stat": {"num_nodes": 2, "num_edges": 1, "num_subgraphs": 1}}}
-{"id": "918cae06a722d8b42c560e10063784ca59cb341c632fa831eacaec4e0e84e525", "value": {"abstract": {"id": "眼科-白内障科"}, "graph_stat": {"num_nodes": 2, "num_edges": 1, "num_subgraphs": 1}}}
 {"id": "2ac586ca9b4480711bc95100f137d8d8f72b0cbd03c9c3fb802ea80b090b1f70", "value": {"abstract": {"id": "眼科-青光眼科"}, "graph_stat": {"num_nodes": 2, "num_edges": 1, "num_subgraphs": 1}}}
+{"id": "918cae06a722d8b42c560e10063784ca59cb341c632fa831eacaec4e0e84e525", "value": {"abstract": {"id": "眼科-白内障科"}, "graph_stat": {"num_nodes": 2, "num_edges": 1, "num_subgraphs": 1}}}
 {"id": "eb4890dd4461394ad474301172d5a35178f6cacf100fa9839161879c898572c0", "value": {"abstract": {"id": "眼科-小儿眼科"}, "graph_stat": {"num_nodes": 2, "num_edges": 1, "num_subgraphs": 1}}}
 {"id": "c6db0ebf9a00a9863b082a27084a38fee64a527f3ceac028eccd507d4f2b8b4c", "value": {"abstract": {"id": "眼科-眼整形科"}, "graph_stat": {"num_nodes": 2, "num_edges": 1, "num_subgraphs": 1}}}
 {"id": "61a1b43f568117d28ddb340d2a05714a86738e288c72b632c34a210dcc3d0d59", "value": {"abstract": {"id": "眼科-眼外伤科"}, "graph_stat": {"num_nodes": 2, "num_edges": 1, "num_subgraphs": 1}}}
@@ -265,19 +265,12 @@
 {"id": "a56d434c6c21cb39bfe7b5f5c20ecd0900d8976440dbc13b4e200cba2f11b1a3", "value": {"abstract": {"id": "传染科"}, "graph_stat": {"num_nodes": 1, "num_edges": 0, "num_subgraphs": 1}}}
 {"id": "e5ade8552f5392d4a566c15108e7241f3f31e0ef3185a0b9149b9355ed247ac1", "value": {"abstract": {"id": "传染科-肝病科"}, "graph_stat": {"num_nodes": 2, "num_edges": 1, "num_subgraphs": 1}}}
 {"id": "03837ae32309adc514d7c380fee9a0ba8db39e57c5b799b0e1c0e585ab425afe", "value": {"abstract": {"id": "病理科"}, "graph_stat": {"num_nodes": 1, "num_edges": 0, "num_subgraphs": 1}}}
-{"id": "0a0515da4225c82167d1aee1e8ae746d2dc81362d5039053514d6558d143c122", "value": {"abstract": {"id": "麻醉科"}, "graph_stat": {"num_nodes": 1, "num_edges": 0, "num_subgraphs": 1}}}
 {"id": "c9b8bc0d7b90e4e0a48b7ba8a2e9c300b27eea15ddaad9b546dc1f3f614449ae", "value": {"abstract": {"id": "急诊科"}, "graph_stat": {"num_nodes": 1, "num_edges": 0, "num_subgraphs": 1}}}
+{"id": "0a0515da4225c82167d1aee1e8ae746d2dc81362d5039053514d6558d143c122", "value": {"abstract": {"id": "麻醉科"}, "graph_stat": {"num_nodes": 1, "num_edges": 0, "num_subgraphs": 1}}}
 {"id": "558868cfe330844763226325e5316262727305fafa4bc397eef6cb666ef1c881", "value": {"abstract": {"id": "运动医学科"}, "graph_stat": {"num_nodes": 1, "num_edges": 0, "num_subgraphs": 1}}}
-{"id": "3854310f9e059cb102b60035620ec30730348076fc4dced7f59b05bf28904b47", "value": {"abstract": {"src": "躁狂症", "dst": "卡马西平片"}, "graph_stat": {"num_nodes": 0, "num_edges": 1, "num_subgraphs": 1}}}
 {"id": "f6f530bd95b51acf1888bfcafe64fdd8d9839b5cc653e7cb443c98faa4aa9eed", "value": {"abstract": {"src": "躁狂症", "dst": "利培酮片"}, "graph_stat": {"num_nodes": 0, "num_edges": 1, "num_subgraphs": 1}}}
+{"id": "3854310f9e059cb102b60035620ec30730348076fc4dced7f59b05bf28904b47", "value": {"abstract": {"src": "躁狂症", "dst": "卡马西平片"}, "graph_stat": {"num_nodes": 0, "num_edges": 1, "num_subgraphs": 1}}}
 {"id": "4fe1f41746cfc81d93993d910465b048e35377c33ad2a0953b5491f35a863ee6", "value": {"abstract": {"src": "躁狂症", "dst": "舒必利片"}, "graph_stat": {"num_nodes": 0, "num_edges": 1, "num_subgraphs": 1}}}
 {"id": "97e6aeb1986a2184a884e54bb55c9d944f1d5b4f7cce46072359c30619b0985b", "value": {"abstract": {"src": "红果果梦工厂", "dst": "舒必利片"}, "graph_stat": {"num_nodes": 0, "num_edges": 1, "num_subgraphs": 1}}}
 {"id": "96015a33881fc70b43f4ed22ebb443088e1a6af01bac240840f02521337872d5", "value": {"abstract": {"src": "红果果梦工厂", "dst": "利培酮片"}, "graph_stat": {"num_nodes": 0, "num_edges": 1, "num_subgraphs": 1}}}
 {"id": "7c996992458ab6782483a543136a1c51e472c676f3b8d57f6b14c9039088f69a", "value": {"abstract": {"src": "绿泡泡梦工厂", "dst": "卡马西平片"}, "graph_stat": {"num_nodes": 0, "num_edges": 1, "num_subgraphs": 1}}}
-{"id": "315130d3ce45e8fc720a78d9dc5ef74979da99449c7295100b45a9e41e536236", "value": {"abstract": {"idx": "2", "title": "甲状腺结节", "text": "甲状腺结节是指在甲状", "alias": "甲状腺结节"}, "graph_stat": {"num_nodes": 65, "num_edges": 96, "num_subgraphs": 1}}}
-{"id": "962dffd8555b3acc83b3711373f1f30f1b98e51ead9efe7772fdf258673bfee7", "value": {"abstract": {"idx": "1", "title": "脂溢性皮炎", "text": "脂溢性皮炎，亦称脂溢", "alias": "脂溢性湿疹"}, "graph_stat": {"num_nodes": 63, "num_edges": 93, "num_subgraphs": 1}}}
-{"id": "d6e7233932f56abb67242451aa99ad490432ce527f1ad888b5e2cc591b5250e3", "value": {"abstract": {"S": "躁郁症", "P": "recommand_", "O": "山楂麦芽汤", "properties": "{\"confiden"}, "graph_stat": {"num_nodes": 2, "num_edges": 1, "num_subgraphs": 1}}}
-{"id": "41c120ad7dbcc6385e070f5342d2d74dffc1cd94821f10c292b9e07aa49514f9", "value": {"abstract": {"S": "躁郁症", "P": "recommand_", "O": "小麦粥", "properties": "{\"confiden"}, "graph_stat": {"num_nodes": 2, "num_edges": 1, "num_subgraphs": 1}}}
-{"id": "f089dff16d8c74963b85fa731a0ef7fb0383b05c6b9b86f51eef9b705ffd1eb2", "value": {"abstract": {"S": "躁郁症", "P": "recommand_", "O": "荞麦粥", "properties": "{\"confiden"}, "graph_stat": {"num_nodes": 2, "num_edges": 1, "num_subgraphs": 1}}}
-{"id": "fec985f974ade60cbf99e50dfb2b377e31a1f7a329c55dd12e83f71c5721e3ad", "value": {"abstract": "doc.txt", "graph_stat": {"num_nodes": 67, "num_edges": 99, "num_subgraphs": 1}}}
-{"id": "d61fdf00c509045b5f4f7d43adf6785cb849f892ca49c53a01eab51dfec67ae9", "value": {"abstract": "doc.txt", "graph_stat": {"num_nodes": 65, "num_edges": 96, "num_subgraphs": 1}}}

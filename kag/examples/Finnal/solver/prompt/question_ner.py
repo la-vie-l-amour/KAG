@@ -34,19 +34,19 @@ C. 泼尼松
 D. INH+RF
 ",
             "output": [
-                    {"entity": "发热呕吐", "category": "Disease"},
-                    {"entity": "嗜睡状", "category": "Symptom"},
-                    {"entity": "营养差", "category": "Symptom"},
-                    {"entity": "右侧鼻唇沟变浅", "category": "Symptom"},
-                    {"entity": "心肺腹部未见异常", "category": "Symptom"},
-                    {"entity": "蛋白800mg/L", "category": "ExaminationTest"},
-                    {"entity": "糖2.24mmol/L", "category": "ExaminationTest"},
-                    {"entity": "氯化物100mmol/L", "category": "ExaminationTest"},
-                    {"entity": "青霉素", "category": "Medicine"},
-                    {"entity": "异烟肼", "category": "Medicine"},
-                    {"entity": "泼尼松", "category": "Medicine"},
-                    {"entity": "INH", "category": "Medicine"},
-                    {"entity": "RF", "category": "Medicine"}
+                    {"name": "发热呕吐", "category": "Disease"},
+                    {"name": "嗜睡状", "category": "Symptom"},
+                    {"name": "营养差", "category": "Symptom"},
+                    {"name": "右侧鼻唇沟变浅", "category": "Symptom"},
+                    {"name": "心肺腹部未见异常", "category": "Symptom"},
+                    {"name": "蛋白800mg/L", "category": "ExaminationTest"},
+                    {"name": "糖2.24mmol/L", "category": "ExaminationTest"},
+                    {"name": "氯化物100mmol/L", "category": "ExaminationTest"},
+                    {"name": "青霉素", "category": "Medicine"},
+                    {"name": "异烟肼", "category": "Medicine"},
+                    {"name": "泼尼松", "category": "Medicine"},
+                    {"name": "INH", "category": "Medicine"},
+                    {"name": "RF", "category": "Medicine"}
                 ]
         }
     ],

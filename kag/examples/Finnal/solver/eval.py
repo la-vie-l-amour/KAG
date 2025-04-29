@@ -29,7 +29,7 @@ if __name__ == "__main__":
     import_modules_from_path("./prompt")
 
     demo = ExplainDemo()
-    query = "内分泌科属于哪个大的科室？"
+    query = "甲亢是否是易于治疗的？"
     answer, trace_log = demo.qa(query)
     print(f"Question: {query}")
     print(f"Answer: {answer}")

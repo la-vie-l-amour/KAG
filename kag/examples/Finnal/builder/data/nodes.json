@@ -257,36 +257,5 @@
         "id": "酒石酸美托洛尔片",
         "name": "酒石酸美托洛尔片",
         "label": "Medicine"
-    },
-
-    {
-        "id": "红果果梦工厂",
-        "name": "红果果梦工厂",
-        "label": "Factory"
-    },
-    {
-        "id": "绿泡泡梦工厂",
-        "name": "绿泡泡梦工厂",
-        "label": "Factory"
-    },
-    {
-        "id": "利培酮片",
-        "name": "利培酮片",
-        "label": "Medicine"
-    },
-    {
-        "id": "卡马西平片",
-        "name": "卡马西平片",
-        "label": "Medicine"
-    },
-    {
-        "id": "舒必利片",
-        "name": "舒必利片",
-        "label": "Medicine"
-    },
-    {
-        "id": "躁狂症",
-        "name": "躁狂症",
-        "label": "Disease"
     }
 ]
